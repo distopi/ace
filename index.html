@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Atributos de Personagem</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+
+
+</head>
+
+<body>
+    <div class="caixa">
+        <label>nivel:
+            <input type="number" id="nivel" min="1" max="20" value="1">
+        </label>
+    </div>
+
+    <div class="caixa">
+        <label>
+
+            proficiencia:<p id="proficiencia">+2</p>
+
+        </label>
+
+    </div>
+
+
+
+    <div class="caixa">
+        <div class="lifeblock">
+
+            <div class="controles">
+                <div class="caixa">
+                    <input type="number" id="life_input">
+
+                    <button id="life_dano">dano</button>
+
+                    <button id="life_cura">cura</button>
+
+                    <button id="life_override">override</button>
+
+
+                </div>
+            </div>
+            <div class="caixa">
+                <div class="outputs">
+
+                    <div class="container">
+                        <div class="linhas">
+                            <div class="celula">
+                                atual:<p id="life_atual" class="numeros">100</p>
+                            </div>
+                            <div class="celula">
+                                max:<p id="life_max" class="numeros">100</p>
+                            </div>
+                            <div class="celula">
+                                armadura:
+                                <p id="armadura_out" class="numeros">???</p>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+            <div class="linhas">
+                <div class="celula">
+
+                </div>
+            </div>
+            <div class="caixa">
+                <div class="linhas">
+                    <div class="celula">
+
+                        <label>
+                            escudo:
+                            <input type="checkbox" id="escudo">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="linhas">
+                    <div class="celula">
+
+
+                        <label>tipo de armadura:
+                            <select id="opçoes_armadura" name="opcoes">
+                                <option value="leve">leve</option>
+                                <option value="media">media</option>
+                                <option value="pesada">pesada</option>
+                            </select>
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="linhas">
+                    <div class="celula">
+
+
+                        <label>
+                            DC base:
+                            <input id="dc_base" type="number">
+                        </label>
+
+                    </div>
+                </div>
+                <div class="linhas">
+                    <div class="celula">
+
+
+                        <label>
+                            bonus:
+                            <input id="armadura_bonus" type="number">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="caixa">
+
+            <div class="linhas">
+
+                <div class="celula">
+                    <div class="caixa">
+                        <h1>Força</h1>
+                        <div class="caixa" id="força">
+
+
+                            <div class="caixa">
+                                <input type="number" id="força_in" min="1" max="30">
+
+                            </div>
+                            <div class="caixa">
+                                <p id="modforça_out" class="numeros">+5</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="celula">
+                    <div class="caixa">
+
+                        <h1>Destreza</h1>
+
+
+
+
+                        <div class="caixa" id="destreza">
+                            <div class="caixa">
+                                <input type="number" id="dex_in" min="1" max="30">
+                            </div>
+                            <div class="caixa">
+                                <p id="moddex_out" class="numeros">+5</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="celula">
+
+                    <div class="caixa">
+
+
+                        <h1>Constituição</h1>
+
+
+                        <div class="caixa" id="constituição">
+                            <div class="caixa">
+                                <input type="number" id="cons_in" min="1" max="30">
+                            </div>
+                            <div class="caixa">
+                                <p id="modcons_out" class="numeros">+5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="linhas">
+                <div class="celula">
+
+                    <div class="caixa">
+
+
+                        <h1>Inteligencia</h1>
+
+                        <div class="caixa" id="inteligencia">
+                            <div class="caixa">
+                                <input type="number" id="int_in" min="1" max="30">
+                            </div>
+                            <div class="caixa">
+                                <p id="modint_out" class="numeros">+5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="celula">
+
+                    <div class="caixa">
+
+                        <h1>Sabedoria</h1>
+
+                        <div class="caixa" id="sabedoria">
+                            <div class="caixa">
+                                <input type="number" id="sab_in" min="1" max="30">
+                            </div>
+                            <div class="caixa">
+                                <p id="modsab_out" class="numeros">+5</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="celula">
+
+
+                    <div class="caixa">
+
+
+                        <h1>Carisma</h1>
+
+                        <div class="caixa" id="carisma">
+                            <div class="caixa">
+                                <input type="number" id="char_in" min="1" max="30">
+                            </div>
+                            <div class="caixa">
+                                <p id="modchar_out" class="numeros">+5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="caixa">
+            <h1>salvaguardas</h1>
+            <div class="linhas">
+                <div class="celula">
+                    <div class="caixa" id="força">
+                        <label>
+                            <input type="checkbox" id="força_saving_check">
+                            Força
+                        </label>
+                        <div class="caixa">
+                            <label> bonus:
+                                <input type="number" id="força_save_bonus">
+                            </label>
+                            <p id="força_saving"></p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="celula">
+                    <div class="caixa" id="destreza">
+                        <label>
+                            <input type="checkbox" id="dex_saving_check">
+                            Destreza
+                        </label>
+                        <div class="caixa">
+                            <label> bonus:
+                                <input type="number" id="dex_save_bonus">
+                            </label>
+                            <p id="dex_saving"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="celula">
+                    <div class="caixa" id="constituição">
+                        <label>
+                            <input type="checkbox" id="cons_saving_check">
+                            Constituição
+                        </label>
+                        <div class="caixa">
+                            <label> bonus:
+                                <input type="number" id="cons_save_bonus">
+                            </label>
+                            <p id="cons_saving"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="celula">
+                    <div class="caixa" id="inteligencia">
+
+                        <label>
+                            <input type="checkbox" id="int_saving_check">
+                            Inteligencia
+                        </label>
+                        <div class="caixa">
+                            <label> bonus:
+                                <input type="number" id="int_save_bonus">
+                            </label>
+                            <p id="int_saving"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="celula">
+                    <div class="caixa" id="sabedoria">
+                        <label>
+                            <input type="checkbox" id="sab_saving_check">
+                            Sabedoria
+                        </label>
+                        <div class="caixa">
+                            <label> bonus:
+                                <input type="number" id="sab_save_bonus">
+                            </label>
+                            <p id="sab_saving"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="celula">
+                    <div class="caixa" id="carisma">
+                        <label>
+                            <input type="checkbox" id="char_saving_check">
+                            Carisma
+                        </label>
+                        <div class="caixa">
+                            <label> bonus:
+                                <input type="number" id="char_save_bonus">
+                            </label>
+                            <p id="char_saving"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="caixa">
+        <div class="caixa" id="força">
+            <div class="caixa">
+                Força
+            </div>
+            <input type="checkbox" id="atletismo_pericia">
+            <input type="checkbox" id="atletismo_expertise">
+
+            Atletismo
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="atletismo_bonus">
+                </label>
+
+                <p id="atletismo"></p>
+            </div>
+
+        </div>
+        <div class="caixa" id="destreza">
+            <div class="caixa">
+                Destreza
+            </div>
+
+            <input type="checkbox" id="acrobacia_pericia">
+            <input type="checkbox" id="acrobacia_expertise">
+
+            Acrobacia
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="acrobacia_bonus">
+                </label>
+                <p id="acrobacia"></p>
+            </div>
+
+            <input type="checkbox" id="prestidigitação_pericia">
+            <input type="checkbox" id="prestidigitação_expertise">
+
+            Prestidigitação
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="prestidigitação_bonus">
+                </label>
+                <p id="prestidigitação"></p>
+            </div>
+
+            <input type="checkbox" id="furtividade_pericia">
+            <input type="checkbox" id="furtividade_expertise">
+
+            Furtividade
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="furtividade_bonus">
+                </label>
+                <p id="furtividade"></p>
+            </div>
+
+
+
+        </div>
+        <div class="caixa" id="carisma">
+            <div class="caixa">
+                Carisma
+            </div>
+
+
+
+            <input type="checkbox" id="enganação_pericia">
+            <input type="checkbox" id="enganação_expertise">
+
+            Enganação
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="enganação_bonus">
+                </label>
+                <p id="enganação"></p>
+            </div>
+
+            <input type="checkbox" id="intimidação_pericia">
+            <input type="checkbox" id="intimidação_expertise">
+
+            Intimidação
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="intimidação_bonus">
+                </label>
+                <p id="intimidação"></p>
+            </div>
+
+            <input type="checkbox" id="performance_pericia">
+            <input type="checkbox" id="performance_expertise">
+
+            Performance
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="performance_bonus">
+                </label>
+                <p id="performance"></p>
+            </div>
+
+
+            <input type="checkbox" id="persuasão_pericia">
+            <input type="checkbox" id="persuasão_expertise">
+
+            Persuasão
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="persuasão_bonus">
+                </label>
+                <p id="persuasão"></p>
+            </div>
+
+
+
+        </div>
+        <div class="caixa" id="sabedoria">
+            <div class="caixa">
+                Sabedoria
+            </div>
+
+            <input type="checkbox" id="cuidado_com_animais_pericia">
+            <input type="checkbox" id="cuidado_com_animais_expertise">
+
+            Cuidado com animais
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="cuidado_com_animais_bonus">
+                </label>
+                <p id="cuidado_com_animais"></p>
+            </div>
+
+            <input type="checkbox" id="intuição_pericia">
+            <input type="checkbox" id="intuição_expertise">
+
+            Intuição
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="intuição_bonus">
+                </label>
+                <p id="intuição"></p>
+            </div>
+
+            <input type="checkbox" id="medicina_pericia">
+            <input type="checkbox" id="medicina_expertise">
+
+            Medicina
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="medicina_bonus">
+                </label>
+                <p id="medicina"></p>
+            </div>
+
+
+
+            <input type="checkbox" id="percepção_pericia">
+            <input type="checkbox" id="percepção_expertise">
+
+            Percepção
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="percepção_bonus">
+                </label>
+                <p id="percepção"></p>
+            </div>
+
+
+            <input type="checkbox" id="sobrevivencia_pericia">
+            <input type="checkbox" id="sobrevivencia_expertise">
+
+            Sobrevivencia
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="sobrevivencia_bonus">
+                </label>
+                <p id="sobrevivencia"></p>
+            </div>
+
+
+
+        </div>
+        <div class="caixa" id="inteligencia">
+            <div class="caixa">
+                Inteligencia
+            </div>
+
+
+            <input type="checkbox" id="arcana_pericia">
+            <input type="checkbox" id="arcana_expertise">
+
+            Arcana
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="arcana_bonus">
+                </label>
+                <p id="arcana"></p>
+            </div>
+
+            <input type="checkbox" id="historia_pericia">
+            <input type="checkbox" id="historia_expertise">
+
+            Historia
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="historia_bonus">
+                </label>
+                <p id="historia"></p>
+            </div>
+
+            <input type="checkbox" id="investigação_pericia">
+            <input type="checkbox" id="investigação_expertise">
+
+            Investigação
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="investigação_bonus">
+                </label>
+                <p id="investigação"></p>
+            </div>
+
+
+            <input type="checkbox" id="natureza_pericia">
+            <input type="checkbox" id="natureza_expertise">
+
+            Natureza
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="natureza_bonus">
+                </label>
+                <p id="natureza"></p>
+            </div>
+
+
+            <input type="checkbox" id="religião_pericia">
+            <input type="checkbox" id="religião_expertise">
+
+            Religião
+            <div class="caixa">
+                <label> bonus:
+                    <input type="number" id="religião_bonus">
+                </label>
+                <p id="religião"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="caixa">
+        <h1>passivas</h1>
+
+        <div class="caixa">
+            <label>investigação passiva: <p id="investigação_passiva"></p></label>
+            <label>bonus:<input type="number" id="investigação_passiva_bonus"></label>
+
+        </div>
+
+        <br>
+        <div class="caixa">
+
+            <label>percepção passiva: <p id="percepção_passiva"></p></label>
+            <label>bonus:<input type="number" id="percepção_passiva_bonus"></label>
+
+        </div>
+
+        <br>
+
+        <div class="caixa">
+
+            <label>intuição passiva: <p id="intuição_passiva"></p></label>
+            <label>bonus:<input type="number" id="intuição_passiva_bonus"></label>
+        </div>
+    </div>
+
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
